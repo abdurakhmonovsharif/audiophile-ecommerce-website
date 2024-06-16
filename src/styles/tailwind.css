@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    font-family: 'Manrope';
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d87d4a;
+  }
+
+  .container {
+    max-width: 310px;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 689px;
+      padding: 0 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1109px;
+    }
+  }
+
+ 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+
+  input[type='radio'] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: #cfcfcf;
+    width: 1.15em;
+    height: 1.15em;
+    border: 1px solid #cfcfcf;
+    border-radius: 50%;
+    transform: translateY(160%);
+    margin-left: 21px;
+    display: grid;
+    place-content: center;
+  }
+
+  input[type='radio']::before {
+    content: '';
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #d87d4a;
+  }
+
+  input[type='radio']:checked::before {
+    transform: scale(1);
+  }
+
+  input[type='radio']:checked + label {
+    border-color: #d87d4a;
+  }
+
+
+  .social-links svg path {
+    transition: fill 0.3s ease;
+  }
+
+  .social-links svg:hover path {
+    fill: #d87d4a;
+  }
+}
+
+@layer components {
+  .mobile-menu {
+    position: fixed;
+    top: 9%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    overflow-y: auto;
+    transition: transform 0.5s ease-out;
+    transform: translateY(-100%);
+    z-index: 10;
+  }
+
+  .mobile-menu.active {
+    transform: translateY(0);
+  }
+
+  nav {
+    z-index: 20;
+  }
+
+  .reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .cart {
+    background-color: #ffffff;
+    padding-top: 2rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    border-radius: 0.5rem;
+    width: 327px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+  }
+
+  @media (min-width: 768px) {
+    .cart {
+      top: 32px;
+      right: 0;
+      transform: translateX(20px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .cart {
+      top: 70px;
+      width: 377px;
+      transform: translateX(120px);
+    }
+  }
+
+  @media (min-width: 1136px) {
+    .cart {
+      transform: translateX(180px);
+    }
+  }
+
+  .modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+  }
+
+  .modal {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    width: 400px;
+    max-width: 90%;
+  }
+}
