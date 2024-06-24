@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/audiophile-ecommerce-website-built-w-react-vite-andtailwind-ohaxbod-QE)
-- [Live Site URL](https://audiophile-seangray-dev.vercel.app/)
+
+- [Live Site URL](https://audiophile-ecommerce-website-zeta.vercel.app)
 
 ### Built with
 
@@ -60,8 +60,3 @@ Use this section to recap over some of your major learnings while working throug
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-## Author
-
-- Website - [seangraydev.com](https://www.seangraydev.com)
-- Frontend Mentor - [@seangray-dev](https://www.frontendmentor.io/profile/seangray_dev)
-- Twitter - [@seangray_dev](https://www.twitter.com/yourusername)
